@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Chiya Spot Menu</title>
+    <meta name="description" content="Mobile QR menu for The Chiya Spot branches.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__image" aria-hidden="true"></div>
+      <nav class="topbar" aria-label="Branch selector">
+        <a class="brand" href="./">
+          <span>The</span>
+          <strong>Chiya Spot</strong>
+        </a>
+        <select id="branchSelect" aria-label="Select branch"></select>
+      </nav>
+      <div class="hero__content">
+        <p class="eyebrow" id="branchLabel">QR Menu</p>
+        <h1>Fav Hangout Spot</h1>
+        <p class="hero__copy">A warm corner for chiya, bites, conversation, and slow afternoons.</p>
+        <div class="hero__chips" aria-label="Cafe mood">
+          <span>Clay walls</span>
+          <span>Teal accents</span>
+          <span>Brass details</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Menu filters">
+        <label class="search">
+          <span>Search menu</span>
+          <input id="searchInput" type="search" placeholder="Try momo, chai, fries">
+        </label>
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Menu categories"></div>
+      </section>
+
+      <section class="branch-grid" id="branchGrid" aria-label="Available branches"></section>
+      <section class="menu" id="menuRoot" aria-live="polite"></section>
+    </main>
+
+    <footer class="footer">
+      <p>All listed prices are inclusive of 13% VAT where noted in the source menu PDFs.</p>
+      <p>Use <code>?branch=golfutar</code>, <code>?branch=bhaktapur</code>, <code>?branch=putlisadak</code>, or <code>?branch=boudha</code> for branch QR links.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
