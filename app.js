@@ -4,6 +4,7 @@ const MENU = {
     { id: "bhaktapur", name: "Bhaktapur", note: "Source: Bhaktapur.pdf", live: true },
     { id: "putlisadak", name: "Putalisadak", note: "Source: putlisadak.pdf", live: true },
     { id: "boudha", name: "Boudha", note: "Source: Boudha.pdf", live: true },
+    { id: "kumaripati", name: "Kumaripati", note: "Source: Kumaripati.pdf", live: true },
     { id: "branch-5", name: "Branch 5", note: "PDF pending", live: false }
   ],
   categories: [
@@ -13,10 +14,10 @@ const MENU = {
       image: "assets/chiya.jpg",
       accent: "#9e2f45",
       items: [
-        ["Chotu's Special", "Our special rich and creamy milk tea with the blend of 8 spices.", "140"],
+        ["Chotu's Special", "Our special rich and creamy milk tea with the blend of 8 spices.", "140", { prices: { kumaripati: "130" } }],
         ["Nut Tea", "Tea with lots of nuts for your indulgence.", "160"],
         ["Karak Masala", "Strong flavored tea with spices to refresh you.", "100"],
-        ["Cutting Chai", "A quick intense shot of chiya.", "100"],
+        ["Cutting Chai", "A quick intense shot of chiya.", "100", { prices: { kumaripati: "90" } }],
         ["Chocolate Tea", "Tea for all the chocolate lovers.", "150"],
         ["Pink Tea", "A perfect balance of nature's sweetness and nourishment.", "160"],
         ["Black Masala", "Strong black tea brewed with aromatic spices.", "80"]
@@ -49,7 +50,8 @@ const MENU = {
         ["Mojito", "Grape / Cranberry / Orange / Mint.", "250"],
         ["Iced Tea", "Peach / Lemon.", "280"],
         ["Lemonade", "Mint / Strawberry / Blueberry.", "230"],
-        ["Kiwi Burst", "", "250"]
+        ["Kiwi Burst", "", "250"],
+        ["Lassi", "Indrachok ko local lassi.", "250", { branches: ["kumaripati"] }]
       ]
     },
     {
@@ -61,8 +63,10 @@ const MENU = {
         ["Chau-Chau Sadheko", "Chicken / Veg. Fusion of homemade spices, flavorful aloo dum, crunchy chips, and zesty masala tossed with Wai Wai.", "190"],
         ["French Fries", "Cheese onion oregano / Peri Peri onion. Crispy golden fries tossed in your choice of seasoning.", "295"],
         ["Mini Samosa", "Chicken / Veg. A crispy bite filled with flavorful chicken mince or potato and cheese.", "300/220"],
-        ["Chicken Aloo Pakoda", "Crispy, deep-fried bites of spiced chicken and potato.", "300"],
-        ["Hot and Spicy Sausage", "Sausage skewered and coated in a special homemade spice blend.", "250"]
+        ["Chicken Aloo Pakoda", "Crispy, deep-fried bites of spiced chicken and potato.", "300", { branches: ["golfutar", "bhaktapur", "putlisadak", "boudha"] }],
+        ["Pakoda", "Veg / chicken. Crispy, deep-fried bites of spiced chicken and potato.", "190/280", { branches: ["kumaripati"] }],
+        ["Hot and Spicy Sausage", "Sausage skewered and coated in a special homemade spice blend.", "250"],
+        ["Crispy Corn", "Lightly fried corn kernels tossed with aromatic spices.", "150", { branches: ["kumaripati"] }]
       ]
     },
     {
@@ -73,8 +77,9 @@ const MENU = {
       items: [
         ["Nachos and Salsa", "Crispy corn and kodo (millet) chips paired with refreshing salsa.", "380"],
         ["Loaded Chips and Dip", "Crunchy Nepali chips served with a rich, creamy dip topped with savory cheese and onions.", "280"],
-        ["Crispy Chilly Potato", "Crispy potato slices tossed in spices and sauces.", "320"],
-        ["Loaded Fries with Chicken", "Golden fries and chicken tenders tossed in peri peri and smothered in creamy sauce.", "480"],
+        ["Crispy Chilly Potato", "Crispy potato slices tossed in spices and sauces.", "320", { branches: ["golfutar", "bhaktapur", "putlisadak", "boudha"] }],
+        ["Loaded Fries with Chicken", "Golden fries and chicken tenders tossed in peri peri and smothered in creamy sauce.", "480", { branches: ["golfutar", "bhaktapur", "putlisadak", "boudha"] }],
+        ["Timmur Alu", "Potatoes tossed in traditional Nepali spices, delicately infused with a hint of timmur.", "180", { branches: ["kumaripati"] }],
         ["Nepali Style Hot Wings", "Crispy fried chicken wings coated in fiery Nepali style hot sauce.", "450"],
         ["Aloo Keema Chop", "Crispy patties filled with spiced potato and minced meat.", "280"]
       ]
@@ -86,8 +91,11 @@ const MENU = {
       accent: "#6f2035",
       items: [
         ["Momo", "Chicken.", "320"],
-        ["Club Sandwich", "Chicken, egg, lettuce, tomato, and mayonnaise in three slices of bread.", "420"],
-        ["Katti Roll", "Chicken / paneer wrapped in roti with veggies and tangy sauce.", "320"],
+        ["Club Sandwich", "Chicken, egg, lettuce, tomato, and mayonnaise in three slices of bread.", "420", { prices: { kumaripati: "380" } }],
+        ["Mushroom Chilly", "Crispy mushroom slices tossed in a mouthwatering blend of spices and sauces.", "180", { branches: ["kumaripati"] }],
+        ["Paneer Folded Wrap", "Roti wrap loaded with seasoned paneer, melted cheese, tomatoes, and onions.", "290", { branches: ["kumaripati"] }],
+        ["Crispy Chilly Potato", "Crispy potato slices tossed in a mouthwatering blend of spices and sauces.", "295", { branches: ["kumaripati"] }],
+        ["Katti Roll", "Chicken / paneer wrapped in roti with veggies and tangy sauce.", "320", { prices: { kumaripati: "295/315" } }],
         ["Bhatti Style Chowmein", "Veg / Buff / Chicken. Smokey, spicy, and local with black chickpeas and potato.", "290/320", { branches: ["golfutar", "bhaktapur", "putlisadak", "boudha"] }],
         ["Fried Rice", "Veg / chicken. Taichin rice tossed with spices, egg, chicken or veg, and chilly oil.", "290/320", { branches: ["bhaktapur"] }]
       ]
@@ -99,8 +107,8 @@ const MENU = {
       accent: "#8a4937",
       items: [
         ["Hookah", "", "600"],
-        ["Cloud Hookah", "", "800"],
-        ["Additional Coal", "Normal / Cloud.", "50/80"],
+        ["Cloud Hookah", "", "800", { branches: ["golfutar", "bhaktapur", "putlisadak", "boudha"] }],
+        ["Additional Coal", "Normal / Cloud.", "50/80", { prices: { kumaripati: "50" } }],
         ["Mineral Water", "", "45"]
       ]
     }
