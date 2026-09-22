@@ -4,8 +4,7 @@ const MENU = {
     { id: "bhaktapur", name: "Bhaktapur", note: "Source: Bhaktapur.pdf", live: true },
     { id: "putlisadak", name: "Putalisadak", note: "Source: putlisadak.pdf", live: true },
     { id: "boudha", name: "Boudha", note: "Source: Boudha.pdf", live: true },
-    { id: "kumaripati", name: "Kumaripati", note: "Source: Kumaripati.pdf", live: true },
-    { id: "branch-5", name: "Branch 5", note: "PDF pending", live: false }
+    { id: "kumaripati", name: "Kumaripati", note: "Source: Kumaripati.pdf", live: true }
   ],
   categories: [
     {
