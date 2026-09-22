@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="416" height="640" viewBox="0 0 416 640">
+  <defs>
+    <filter id="paper" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".018 .075" numOctaves="5" seed="61"/>
+      <feColorMatrix type="saturate" values=".28"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .5"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="fibers" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".32 .022" numOctaves="2" seed="9"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 .18"/>
+      </feComponentTransfer>
+    </filter>
+    <radialGradient id="warm" cx=".46" cy=".3" r=".78">
+      <stop offset="0" stop-color="#f2dfaa"/>
+      <stop offset=".62" stop-color="#d7b777"/>
+      <stop offset="1" stop-color="#9f7438"/>
+    </radialGradient>
+    <linearGradient id="age" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ead19a" stop-opacity=".5"/>
+      <stop offset=".5" stop-color="#f5e5b8" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#8d5f2d" stop-opacity=".4"/>
+    </linearGradient>
+  </defs>
+  <rect width="416" height="640" fill="url(#warm)"/>
+  <rect width="416" height="640" fill="url(#age)"/>
+  <rect width="416" height="640" filter="url(#paper)" opacity=".55"/>
+  <rect width="416" height="640" filter="url(#fibers)" opacity=".45"/>
+  <g fill="none" stroke="#7f5424" stroke-width="2" opacity=".12">
+    <path d="M31 90c82-23 132-16 181 4 51 21 98 26 170 0"/>
+    <path d="M18 308c92 16 154 9 213-20 51-25 102-28 171-3"/>
+    <path d="M47 526c61-24 119-25 175-2 58 25 112 19 162-18"/>
+  </g>
+  <rect width="416" height="640" fill="#f1dfad" opacity=".18"/>
+</svg>
